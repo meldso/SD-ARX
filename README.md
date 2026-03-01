@@ -1,18 +1,34 @@
-# SD-ChaCha8
+# SD-ARX: State-Dependent Addition-Rotation-XOR Networks
 
-A closed-loop ARX pseudo-random number generator with state-dependent rotations for accelerated diffusion convergence.
+A novel closed-loop architecture for ARX primitives that replaces static rotation constants with state-dependent values, fundamentally accelerating diffusion convergence.
 
 ## Overview
 
-SD-ChaCha8 is an 8-round Addition-Rotation-XOR (ARX) PRNG that replaces fixed rotation constants with dynamically derived, state-dependent values. This architectural innovation eliminates geometric dead zones inherent in static rotation schedules, achieving full Strict Avalanche Criterion (SAC) compliance in 2 double-rounds versus 5+ for standard ChaCha20.
+SD-ARX introduces a new architectural principle for Addition-Rotation-XOR (ARX) networks: **entropy-dependent routing**. Rather than applying fixed rotation schedules, SD-ARX derives rotation magnitudes dynamically from the evolving internal state, creating a feedback mechanism that eliminates geometric dead zones and dramatically accelerates diffusion.
 
-## Key Features
+This repository contains the reference implementation instantiated as **SD-ChaCha8**, an 8-round PRNG demonstrating the SD-ARX principle.
 
-- **Entropy-dependent routing**: Rotation magnitudes derived from internal state eliminate fixed dead zones
-- **Accelerated diffusion**: 55% improvement in first-pass Hamming weight diffusion over standard ChaCha20
-- **Rigorous validation**: Full pass of TestU01 BigCrush (160 tests), topological data analysis, Wigner-Dyson spectral statistics
-- **Cross-platform**: Validated on both ARM64 (Apple M3) and x86-64 architectures
-- **SIMD-optimized**: Barrett reduction enables efficient vectorization
+## The SD-ARX Architecture
+
+### Core Innovation
+
+Traditional ARX designs use static rotation constants:
+```
+d[i+1] = (d[i] XOR a[i+1]) <<< R_static
+```
+
+SD-ARX couples rotation to state entropy:
+```
+r = R(state)                              // Derive rotation from state
+d[i+1] = (d[i] XOR a[i+1]) <<< r         // Apply state-dependent rotation
+```
+
+### Architectural Advantages
+
+- **Eliminates dead zones**: Static schedules create geometric isolation; state-dependent rotations eliminate fixed unreachable positions
+- **Accelerates diffusion**: 55% improvement in first-pass Hamming weight diffusion
+- **Maintains bijectivity**: Proven invertible when R depends only on unchanged state words
+- **Generalizable**: Applies to any ARX primitive (ChaCha, Salsa20, NORX, BLAKE)
 
 ## Performance (Apple M3, ARM64)
 
