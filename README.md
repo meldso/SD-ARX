@@ -26,7 +26,7 @@ d[i+1] = (d[i] XOR a[i+1]) <<< r         // Apply state-dependent rotation
 ### Architectural Advantages
 
 - **Eliminates dead zones**: Static schedules create geometric isolation; state-dependent rotations eliminate fixed unreachable positions
-- **Accelerates diffusion**: 55% improvement in first-pass Hamming weight diffusion
+- **Accelerates diffusion**: 15% improvement in first-pass Hamming weight diffusion
 - **Maintains bijectivity**: Proven invertible when R depends only on unchanged state words
 - **Generalizable**: Applies to any ARX primitive (ChaCha, Salsa20, NORX, BLAKE)
 
@@ -159,5 +159,5 @@ Based on ChaCha20 by D. J. Bernstein. TestU01 validation framework by P. L'Ecuye
 
 ---
 
-**Last updated**: March 2025  
+**Last updated**: March 2026  
 **Status**: Research implementation, validation complete, paper under review
