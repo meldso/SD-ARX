@@ -2,6 +2,8 @@
 
 A novel closed-loop architecture for ARX primitives that replaces static rotation constants with state-dependent values, fundamentally accelerating diffusion convergence.
 
+> **Status**: Community Edition (Apache‑2.0). Enterprise modules (HPC/GPU diagnostics, AVX‑512/NEON kernels, structural MC tooling) available under commercial terms—see **Enterprise Edition** below.
+
 ## Overview
 
 SD-ARX introduces a new architectural principle for Addition-Rotation-XOR (ARX) networks: **entropy-dependent routing**. Rather than applying fixed rotation schedules, SD-ARX derives rotation magnitudes dynamically from the evolving internal state, creating a feedback mechanism that eliminates geometric dead zones and dramatically accelerates diffusion.
