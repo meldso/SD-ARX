@@ -35,7 +35,7 @@ d[i+1] = (d[i] XOR a[i+1]) <<< r         // Apply state-dependent rotation
 | Generator | Cycles/Byte | vs ChaCha20 | SAC Convergence |
 |-----------|-------------|-------------|-----------------|
 | **SD-ChaCha8 Barrett** | **1.681** | **1.67x faster** | **2 double-rounds** |
-| SD-ChaCha8 original | 2.649 | 1.06x faster | 2 double-rounds |
+| SD-ChaCha8 (modulo) | 2.649 | 1.06x faster | 2 double-rounds |
 | ChaCha12 | 2.077 | 1.35x faster | 3-4 double-rounds |
 | ChaCha20 | 2.810 | 1.00x (baseline) | 5+ double-rounds |
 | ChaCha8 (static) | 1.914 | 1.47x faster | Incomplete |
