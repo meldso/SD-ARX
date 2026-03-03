@@ -148,7 +148,7 @@ If you use SD-ChaCha8 in your research, please cite:
 
 Apache License
 
-Copyright (c) 2026 Meldon D'Souza
+Copyright (c) 2026 Meldon Dsouza
 
 Version 2.0, January 2004
 http://www.apache.org/licenses/
