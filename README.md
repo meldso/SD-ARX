@@ -50,10 +50,10 @@ d[i+1] = (d[i] XOR a[i+1]) <<< r         // Apply state-dependent rotation
 - **Status**: All 160 tests passed
 - **Data processed**: ~10 TB per variant
 - **Variants tested**: Original (modulo) and Barrett (optimized)
-- Complete results in `/tests/bigcrush/`
+- Complete results in `/results`
 
 ### Additional Validation
-- **Strict Avalanche Criterion**: Achieved by round 2 (vs round 5+ for ChaCha20)
+- **Strict Avalanche Criterion**: Achieved by round 2 
 - **Topological uniformity**: Vietoris-Rips persistent homology matches true-random baselines
 - **Spectral statistics**: Eigenvalue spacing follows Wigner-Dyson GOE distribution
 
