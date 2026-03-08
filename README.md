@@ -158,8 +158,6 @@ This project uses a dual-licensing model.
 - **Community Edition** — Apache License 2.0 (see `LICENSE.md`)
 - **Enterprise Edition** — commercial license (see `LICENSE-ENTERPRISE.md`)
 
-For enterprise licensing, contact meldon2000@gmail.com
-
 
 ## For Research Queries, Contact
 
