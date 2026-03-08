@@ -40,7 +40,7 @@ typedef struct {
 
 #define ROTL32(x, n) (((x) << (n)) | ((x) >> (32 - (n))))
 
-// Regular modulo 31 operation (uses division)
+// Modulo 31 operation
 static inline uint32_t mod31(uint32_t x) {
     return x % 31;
 }
@@ -49,7 +49,7 @@ static inline void sd_chacha_quarterround_scalar(uint32_t *a, uint32_t *b, uint3
     // Round 1
     *a += *b;
     
-    // State-dependent rotation using regular modulo
+    // State-dependent rotation
     uint32_t rot = mod31((*c ^ *b) & 0xFF) + 1;
     *d = ROTL32(*d ^ *a, rot);
     
@@ -74,7 +74,7 @@ static inline void sd_chacha_quarterround_scalar(uint32_t *a, uint32_t *b, uint3
         (p)[3] = (uint8_t)((v) >> 24); \
     } while (0)
 
-// Single-block generation (scalar version with regular modulo)
+// Single-block generation (scalar)
 void sd_chacha8_scalar_generate(uint8_t *out, size_t num_blocks, void *state_ptr) {
     sd_chacha_scalar_state_t *state = (sd_chacha_scalar_state_t *)state_ptr;
     
@@ -96,7 +96,7 @@ void sd_chacha8_scalar_generate(uint8_t *out, size_t num_blocks, void *state_ptr
             input[i] = x[i];
         }
         
-        // Perform 8 rounds (4 double rounds)
+        // Perform 8 rounds
         for (int round = 0; round < 4; round++) {
             // Column rounds
             sd_chacha_quarterround_scalar(&x[0], &x[4], &x[ 8], &x[12]);
