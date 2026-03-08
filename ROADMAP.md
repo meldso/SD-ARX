@@ -24,5 +24,3 @@
 - Hybrid streams (MRG32k3a controls + SD‑ARX hot loop)
 - Advanced analytics dashboards
 - Extended counters & long‑jump utilities
-
-> For commercial access and timelines, contact meldon2000@gmail.com
