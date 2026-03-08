@@ -6,7 +6,7 @@ The **Enterprise Edition**, which includes additional performance modules, GPU b
 advanced diagnostics, and HPC integrations, is provided under a **commercial license**  
 (`LICENSE-ENTERPRISE.md`).
 
-For evaluation, pricing, and enterprise access, contact: meldon2000@gmail.com
+For evaluation, pricing, and enterprise access, contact: meldon.dsouza@mscsai.christuniversity.in
 
                                 Apache License
                            Version 2.0, January 2004
