@@ -172,5 +172,5 @@ Based on ChaCha20 by D. J. Bernstein. TestU01 validation framework by P. L'Ecuye
 
 ---
 
-**Last updated**: March 2026  
-**Status**: Research implementation, validation complete, paper under review
+**Last updated**: August 2026  
+**Status**: 2026 IEEE International Conference on Next-Gen Intelligent Computing and Applications, https://doi.org/10.1109/ICONICA70605.2026.11736705
