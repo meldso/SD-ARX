@@ -6,6 +6,7 @@ A closed-loop architecture for ARX primitives that replaces static rotation cons
 - Scalar + SIMD reference implementations
 - Benchmark harness & diffusion analytics (SAC/SADM)
 - TestU01 BigCrush runs and logs
+- Published to IEEE Xplore: https://ieeexplore.ieee.org/document/11736705
 - Apache‑2.0 licensing; citation metadata
 
 > **Status**: Community Edition (Apache‑2.0). Available under commercial terms—see **Enterprise Edition** below.
