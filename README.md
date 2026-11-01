@@ -1,6 +1,3 @@
-# SD-ARX: State-Dependent Addition-Rotation-XOR Networks
-
-A closed-loop architecture for ARX primitives that replaces static rotation constants with state-dependent values, accelerating diffusion convergence.
 
 ## v1.0 (Community Edition) — DONE
 - Scalar + SIMD reference implementations
