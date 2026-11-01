@@ -76,25 +76,7 @@ d[i+1] = (d[i] XOR a[i+1]) <<< r         // Apply state-dependent rotation
 - Cryptographic security required (SD-ARX has data-dependent timing)
 - Linear generators suffice for your application
 
-## Implementation Variants
 
-### 1. Barrett Scalar (Recommended for most users)
-```c
-// 1.681 cycles/byte on ARM64
-// Uses Barrett reduction: (x mod 31) via multiply-shift
-```
-
-### 2. Original (Modulo-based)
-```c
-// 2.649 cycles/byte on ARM64
-// Direct modulo operation, portable but slower
-```
-
-### 3. SIMD (Advanced)
-```c
-// ARM NEON / x86 AVX2 vectorization
-// Requires careful handling of per-lane variable rotations
-```
 
 ## Building
 ```bash
